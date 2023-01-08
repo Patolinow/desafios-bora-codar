@@ -1,0 +1,49 @@
+/* Generals */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #020202;
+  --second-bg: #212121;
+  --primary-color: red;
+  --button-and-text-color: white;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--button-and-text-color);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  padding: 10% 20%;
+}
+
+/* Conteudo principal */
+main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: 5fr 4fr;
+  gap: 50px;
+}
+
+.player {
+  height: 100%;
+  background-color: var(--second-bg);
+  border-radius: 15px;
+  padding: auto;
+}
+
+.p1 {
+  grid-area: span 2;
+}
