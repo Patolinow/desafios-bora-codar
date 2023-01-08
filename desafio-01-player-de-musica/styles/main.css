@@ -12,8 +12,8 @@
 :root {
   --bg-color: #020202;
   --second-bg: #212121;
-  --primary-color: red;
-  --button-and-text-color: white;
+  --primary-color: white;
+  --secondary-color: #A1A1A1;
 }
 
 html {
@@ -23,12 +23,12 @@ html {
 body {
   height: 100%;
   background-color: var(--bg-color);
-  color: var(--button-and-text-color);
+  color: var(--primary-color);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  padding: 10% 20%;
+  padding: 5% 20%;
 }
 
-/* Conteudo principal */
+/* Ajustando tamanhos e coisas básicas*/
 main {
   height: 100%;
   display: grid;
@@ -41,9 +41,29 @@ main {
   height: 100%;
   background-color: var(--second-bg);
   border-radius: 15px;
-  padding: auto;
 }
 
 .p1 {
   grid-area: span 2;
+}
+
+/* Customização interna do player */
+
+.wrapper {
+  padding: 10%;
+}
+
+.details h1{
+  font-weight: 500;
+  margin: 5% 0 2.5%;
+}
+
+.details h2 {
+  font-weight: 400;
+  color: var(--secondary-color);
+} 
+
+.p1 .art img{
+  width: 100%;
+  border-radius: 15px;
 }
