@@ -11,7 +11,7 @@
 
 :root {
   --bg-color: #020202;
-  --second-bg: #212121;
+  --second-bg: #7e7e7e41;
   --primary-color: white;
   --secondary-color: #A1A1A1;
 }
@@ -25,7 +25,7 @@ body {
   background-color: var(--bg-color);
   color: var(--primary-color);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  padding: 5% 20%;
+  padding: 5% 18%;
 }
 
 /* Ajustando tamanhos e coisas básicas*/
@@ -47,15 +47,14 @@ main {
   grid-area: span 2;
 }
 
-/* Customização interna do player */
-
+/* Informações do artista */
 .wrapper {
   padding: 10%;
 }
 
 .details h1{
   font-weight: 500;
-  margin: 5% 0 2.5%;
+  margin: 7% 0 2.5%;
 }
 
 .details h2 {
@@ -66,4 +65,51 @@ main {
 .p1 .art img{
   width: 100%;
   border-radius: 15px;
+  margin-top: 15px;
+}
+
+/* Botões */
+.control-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10% 0;
+}
+
+.control-buttons img {
+  height: 30px;
+}
+
+#play {
+  height: 35px;
+}
+
+/* Tempo */
+#duration {
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  margin: 5% 0;
+  cursor: pointer;
+  background: transparent;
+  overflow: hidden;
+
+  background-color: var(--second-bg);
+
+  border-radius: 50px;
+}
+
+#duration::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  box-shadow: -200px 0 0 190px var(--secondary-color);
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  
 }
