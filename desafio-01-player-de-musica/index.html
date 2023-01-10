@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="styles/dark-light-mode.css">
   <link rel="shortcut icon" href="assets/icon.svg" type="image/x-icon">
   
   <title>Music player</title>
@@ -13,6 +14,10 @@
 
 <body>
   <main>
+    <div id="dark-and-light-mode">
+      <button id="dark-and-light-mode-button" class="D-L-M-activated"></button>
+    </div>
+
     <div class="player p1">
       <div class="wrapper">
         <div class="details">
@@ -33,15 +38,15 @@
         <div class="controls">
           <div class="control-buttons">
 
-            <img src="assets/skipL.svg" alt="Voltar para música anterior" class="skip-L">
+            <img src="assets/skipL.svg" alt="Voltar para música anterior" class="skip-L" onclick="prevTrack()">
 
-            <img src="assets/play.svg" alt="Tocar música" class="play-and-pause">
+            <img src="assets/play.svg" alt="Tocar música" class="play-and-pause" onclick="playPauseTrack()">
 
-            <img src="assets/skipR.svg" alt="Pular música" class="skip-R">
+            <img src="assets/skipR.svg" alt="Pular música" class="skip-R" onclick="nextTrack()">
           </div>
 
           <div class="music-track">
-            <input type="range" name="duration" class="duration" min="0" max="100" value="0">
+            <input type="range" name="music-slider" class="music-slider" min="0" max="100" value="0" onchange="seekTo()">
           </div>
 
           <div class="times">
@@ -63,4 +68,5 @@
   </main>
 </body>
 <script src="JS/player.js"></script>
+<script src="JS/darkLightMode.js"></script>
 </html>

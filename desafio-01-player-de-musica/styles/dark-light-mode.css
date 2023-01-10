@@ -1,0 +1,56 @@
+body {
+  --bg-color: #ece9e9;
+  --second-bg: #64646441;
+  --primary-color: black;
+  --secondary-color: #6b6b6b;
+}
+
+body.dark-theme {
+  --bg-color: #020202;
+  --second-bg: #7e7e7e41;
+  --primary-color: white;
+  --secondary-color: #A1A1A1;
+  transition: ease-in-out 500ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg-color: #020202;
+  --second-bg: #7e7e7e41;
+  --primary-color: white;
+  --secondary-color: #A1A1A1;
+  transition: ease-in-out 500ms;
+  }
+
+  body.light-theme {
+    --bg-color: #ece9e9;
+    --second-bg: #64646441;
+    --primary-color: black;
+    --secondary-color: #6b6b6b;
+    
+  }
+}
+
+#dark-and-light-mode {
+  background: url(../assets/moon.svg) no-repeat 4px 6px, url(../assets/sun.svg) no-repeat 47px 6.5px, var(--dark-light-mode);
+  background-size: 30px;
+  width: 80px;
+  border-radius: 40px;
+  padding: 3px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.192);
+
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#dark-and-light-mode-button {
+  background-color: #546160;
+  border-radius: 50%;
+  padding: 18px;
+  transition: ease-in-out 500ms;
+}
+
+.D-L-M-activated {
+  margin-left: 52%;
+}
