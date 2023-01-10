@@ -3,6 +3,7 @@ body {
   --second-bg: #64646441;
   --primary-color: black;
   --secondary-color: #6b6b6b;
+  transition: ease-in-out 500ms;
 }
 
 body.dark-theme {
@@ -10,7 +11,7 @@ body.dark-theme {
   --second-bg: #7e7e7e41;
   --primary-color: white;
   --secondary-color: #A1A1A1;
-  transition: ease-in-out 500ms;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +20,7 @@ body.dark-theme {
   --second-bg: #7e7e7e41;
   --primary-color: white;
   --secondary-color: #A1A1A1;
-  transition: ease-in-out 500ms;
+  
   }
 
   body.light-theme {

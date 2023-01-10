@@ -1,12 +1,12 @@
 const dLMButton = document.getElementById('dark-and-light-mode-button')
-const prefersDarkTheme = window.matchMedia('prefers-color-scheme: dark')
+const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)')
 const currentTheme = localStorage.getItem('theme')
 
 dLMButton.onclick = transition
 
 if (currentTheme == 'dark') {
   document.body.classList.toggle('dark-theme')
-  button.classList.toggle("D-L-M-activated")
+  dLMButton.classList.toggle("D-L-M-activated")
 }
 
 else if (currentTheme == 'light') {
@@ -22,7 +22,7 @@ function transition() {
   }
 
   else {
-    document.body.classList.toggle('light-theme')
+    document.body.classList.toggle('dark-theme')
     var theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light'
   }
 
