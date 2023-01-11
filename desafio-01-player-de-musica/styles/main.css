@@ -24,16 +24,14 @@ body {
   background-color: var(--bg-color);
   color: var(--primary-color);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  padding: 5% 18%;
 }
 
 /* Ajustando tamanhos e coisas básicas*/
+
+
 main {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 3fr 5fr;
-  grid-template-rows: 5fr 4fr;
-  gap: 50px;
+  margin: 0 auto;
+  padding-top: 5vh;
 }
 
 .player {
@@ -43,7 +41,8 @@ main {
 }
 
 .p1 {
-  grid-area: span 2;
+  max-width: 450px;
+  margin: auto;
 }
 
 /* Informações do artista */
@@ -109,6 +108,7 @@ main {
   border-radius: 50%;
   background-color: var(--slider-color);
   box-shadow: -200px 0 0 190px var(--slider-color);
+  
 }
 
 .times {
@@ -121,21 +121,3 @@ main {
   color: var(--secondary-color);
 }
 
-/* Temporario */
-.p2, .p3 {
-  display: none;
-}
-
-.p1 {
-  max-width: 450px;
-  margin: auto;
-}
-
-main {
-  display: block;
-  margin: auto;
-}
-
-body {
-  padding: 5% 0;
-}
