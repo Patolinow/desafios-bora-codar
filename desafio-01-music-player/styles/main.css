@@ -80,6 +80,7 @@ main {
 .skip-L, .skip-R, .play-and-pause{
   height: 35px;
   cursor: pointer;
+  filter: var(--svg-filter);
 }
 
 .play-and-pause {

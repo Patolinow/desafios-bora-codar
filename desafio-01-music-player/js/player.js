@@ -14,7 +14,6 @@ const skipL = document.querySelector('.skip-L')
 const musicSlider = document.querySelector('.music-slider')
 
 // On going Elements
-let actualTime = 0
 let trackIndex = 0
 let isPlaying = false
 let updateTimer;
@@ -57,7 +56,6 @@ function loadTrack(trackIndex) {
 function reset() {
   remainingTime.textContent = "00:00" // EDITAR PARA COLOCAR O TEMPO FINAL AKI, TA ERRADO
   musicDuration.textContent = "00:00"
-  actualTime = 0
 }
 
 
@@ -109,18 +107,16 @@ function prevTrack() {
 function seekTo(trackedPosition) {
   let seekValue = Math.floor(currentTrack.duration * (trackedPosition / 100))
  
-  actualTime = seekValue
   currentTrack.currentTime = seekValue
 }
 
 function setUpdate() {
 
   if (currentTrack.duration && isPlaying) {
-    actualTime += 1
     let seekPosition = 0
-    let currentRemainingTime = Math.floor(currentTrack.duration) - actualTime
+    let currentRemainingTime = Math.floor(currentTrack.duration) - currentTrack.currentTime
 
-    seekPosition = actualTime * (100 / currentTrack.duration)
+    seekPosition = currentTrack.currentTime * (100 / currentTrack.duration)
 
     musicSlider.value = seekPosition
 
@@ -136,6 +132,3 @@ function setUpdate() {
     ${durationSeconds.toLocaleString('pt-br', { minimumIntegerDigits: 2 })}`
   }
 }
-
-
-

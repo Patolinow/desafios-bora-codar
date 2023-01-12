@@ -3,24 +3,25 @@ body {
   --second-bg: #64646441;
   --primary-color: black;
   --secondary-color: #6b6b6b;
+  --svg-filter: invert(36%) sepia(11%) saturate(0%) hue-rotate(245deg) brightness(76%) contrast(84%);
   transition: ease-in-out 500ms;
 }
-
+/*  */
 body.dark-theme {
   --bg-color: #020202;
   --second-bg: #7e7e7e41;
   --primary-color: white;
-  --secondary-color: #A1A1A1;
-  
+  --secondary-color: #a1a1a1;
+  --svg-filter: invert(98%) sepia(32%) saturate(358%) hue-rotate(180deg) brightness(95%) contrast(88%);
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     --bg-color: #020202;
-  --second-bg: #7e7e7e41;
-  --primary-color: white;
-  --secondary-color: #A1A1A1;
-  
+    --second-bg: #7e7e7e41;
+    --primary-color: white;
+    --secondary-color: #a1a1a1;
+    --svg-filter: invert(98%) sepia(32%) saturate(358%) hue-rotate(180deg) brightness(95%) contrast(88%);
   }
 
   body.light-theme {
@@ -28,12 +29,13 @@ body.dark-theme {
     --second-bg: #64646441;
     --primary-color: black;
     --secondary-color: #6b6b6b;
-    
+    --svg-filter: invert(36%) sepia(11%) saturate(0%) hue-rotate(245deg) brightness(76%) contrast(84%);
   }
 }
 
 #dark-and-light-mode {
-  background: url(../assets/moon.svg) no-repeat 4px 6px, url(../assets/sun.svg) no-repeat 47px 6.5px, var(--dark-light-mode);
+  background: url(../assets/moon.svg) no-repeat 4px 6px, url(../assets/sun.svg) no-repeat 47px 6.5px,
+    var(--dark-light-mode);
   background-size: 30px;
   width: 80px;
   border-radius: 40px;
