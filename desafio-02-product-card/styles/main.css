@@ -1,0 +1,95 @@
+/* Generals */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Lato:wght@100;300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-color: #d9cdf7;
+  --primary-color: #271a45;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h1,
+h2,
+p,
+button {
+  color: var(--primary-color);
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-family: "Crimson Pro", serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(10px, 10vw, 150px);
+}
+
+/* Product */
+.product {
+  text-align: right;
+}
+
+.product #sofa {
+  height: 40vh;
+}
+
+.product #stateButton {
+position: absolute;
+transform: translate(-40px, -40px);
+height: 7vh;
+}
+
+.product #stateButton:hover, .info button:hover {
+  cursor: pointer;
+}
+
+/* Details */
+.info {
+  transform: translateY(-50px);
+}
+
+.info h1 {
+  font-size: 3.5em;
+  margin: 10px 0;
+}
+
+.info h2 {
+  font-weight: 400;
+}
+
+.info button {
+  font-size: 1.4em;
+
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 8px 20px;
+  margin-top: 30px;
+}
+
+.info button:hover {
+  border-color: var(--bg-color);
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  transition: 500ms;
+}
+
