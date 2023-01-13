@@ -40,7 +40,6 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: clamp(10px, 10vw, 150px);
 }
 
 /* Product */
@@ -49,22 +48,23 @@ main {
 }
 
 .product #sofa {
-  height: 40vh;
+  height: 50vh;
 }
 
-.product #stateButton {
+.product #state-button {
 position: absolute;
-transform: translate(-40px, -40px);
-height: 7vh;
+transform: translate(-150px, 20px);
+height: 6vh;
 }
 
-.product #stateButton:hover, .info button:hover {
+.product #state-button:hover, .info button:hover {
   cursor: pointer;
 }
 
 /* Details */
 .info {
   transform: translateY(-50px);
+  padding-right: 10px;
 }
 
 .info h1 {
