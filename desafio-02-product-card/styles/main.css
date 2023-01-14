@@ -9,11 +9,6 @@
   margin: 0;
 }
 
-:root {
-  --bg-color: #d9cdf7;
-  --primary-color: #271a45;
-}
-
 html,
 body,
 main {
@@ -40,6 +35,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 20px;
 }
 
 /* Product */
@@ -49,11 +45,12 @@ main {
 
 .product #sofa {
   height: 50vh;
+  border-radius: 30px;
 }
 
 .product #state-button {
 position: absolute;
-transform: translate(-150px, 20px);
+transform: translate(-420px, 35px);
 height: 6vh;
 }
 

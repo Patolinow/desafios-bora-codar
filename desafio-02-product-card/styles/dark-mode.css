@@ -1,0 +1,55 @@
+/* Colors */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  --bg-color: #d9cdf7;
+  --primary-color: #271a45;
+  transition: ease-in-out 600ms;
+}
+
+body.dark-theme {
+  --bg-color: #271a45;
+  --primary-color: #d9cdf7;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg-color: #271a45;
+    --primary-color: #d9cdf7;
+  }
+
+  body.light-theme {
+    --bg-color: #d9cdf7;
+    --primary-color: #271a45;
+  }
+}
+
+/* Button customization */
+#dark-light-mode {
+  width: 70px;
+  height: 35px;
+
+  top: 30px;
+  right: 30px;
+  position: absolute;
+  padding: 2px;
+  border-radius: 20px;
+
+  background: url(../assets/moon.svg) 3px 3px, url(../assets/sun.svg) 37px 3px, var(--primary-color);
+  background-size: 29px;
+  background-repeat: no-repeat;
+}
+
+.d-l-m-activated {
+  margin-left: 36px;
+}
+
+#dark-light-mode-button {
+  background-color: var(--bg-color);
+  width: 31px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition: ease-in-out 600ms;
+}
