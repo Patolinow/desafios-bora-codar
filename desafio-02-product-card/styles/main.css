@@ -17,6 +17,7 @@ main {
 
 body {
   background-color: var(--bg-color);
+  overflow-y: hidden;
 }
 
 h1,
@@ -41,6 +42,9 @@ main {
 /* Product */
 .product {
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product #sofa {
@@ -49,9 +53,15 @@ main {
 }
 
 .product #state-button {
-position: absolute;
-transform: translate(-420px, 35px);
-height: 6vh;
+transform: translate(40px,60px);
+height: 40px;
+background-color: #271a45bb;
+transition: 300ms;
+border-radius: 50%;
+}
+
+.product #state-button:hover {
+  background-color: #271a45;
 }
 
 .product #state-button:hover, .info button:hover {
@@ -61,7 +71,7 @@ height: 6vh;
 /* Details */
 .info {
   transform: translateY(-50px);
-  padding-right: 10px;
+  padding-right: 24px;
 }
 
 .info h1 {

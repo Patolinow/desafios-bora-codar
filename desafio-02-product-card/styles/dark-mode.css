@@ -6,23 +6,27 @@
 body {
   --bg-color: #d9cdf7;
   --primary-color: #271a45;
+  --svg-filter: invert(87%) sepia(57%) saturate(4840%) hue-rotate(187deg) brightness(100%) contrast(95%);
   transition: ease-in-out 600ms;
 }
 
 body.dark-theme {
   --bg-color: #271a45;
   --primary-color: #d9cdf7;
+  --svg-filter: none;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     --bg-color: #271a45;
     --primary-color: #d9cdf7;
+    --svg-filter: none;
   }
 
   body.light-theme {
     --bg-color: #d9cdf7;
     --primary-color: #271a45;
+    --svg-filter: invert(87%) sepia(57%) saturate(4840%) hue-rotate(187deg) brightness(100%) contrast(95%);
   }
 }
 
@@ -43,7 +47,7 @@ body.dark-theme {
 }
 
 .d-l-m-activated {
-  margin-left: 36px;
+  transform: translateX(35px);
 }
 
 #dark-light-mode-button {

@@ -7,20 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/dark-mode.css">
+  <link rel="stylesheet" href="styles/modal.css">
   <link rel="shortcut icon" href="assets/ico.svg" type="image/x-icon">
   <title>Violet</title>
 </head>
 
 <body>
+
   <main>
     <div id="dark-light-mode">
       <button id="dark-light-mode-button"></button>
     </div>
 
     <div class="product">
-      <img src="assets/sofa.png" alt="Sofá rosa com pernas de madeira e pés de metal" id="sofa">
-
       <img src="assets/360.svg" alt="Veja em 360 graus" id="state-button">
+
+      <img src="assets/sofa.png" alt="Sofá rosa com pernas de madeira e pés de metal" id="sofa">
     </div>
 
     <div class="info">
@@ -30,10 +32,16 @@
 
       <h2>R$ 4.000</h2>
 
-      <button>Adicionar à Cesta</button>
+      <button id="cart-add-button">Adicionar à Cesta</button>
     </div>
+
+    <aside class="modal">
+      <h1>Adicionado</h1>
+      <img class="svg" src="assets/item-added.svg" alt="Item adicionado">
+    </aside>
   </main>
 </body>
 <script src="js/button.js"></script>
 <script src="js/dark-light-mode.js"></script>
+<script src="js/modal.js"></script>
 </html>
