@@ -50,7 +50,6 @@ main {
 
 .product #sofa {
   width: clamp(400px, 70vw, 800px);
-  /* height: clamp(auto ,50%, 50vh); */
   border-radius: 30px;
 }
 

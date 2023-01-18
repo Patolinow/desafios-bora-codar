@@ -20,6 +20,10 @@
     margin-top: 10%;
   }
 
+  .product #sofa {
+    width: 95%;
+  }
+
   .product #state-button {
     transform: translate(10px, 45px);
   }
