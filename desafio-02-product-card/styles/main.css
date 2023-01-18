@@ -34,10 +34,10 @@ h1 {
 
 main {
   display: grid;
-  grid-template: "product details details" 1fr;
+  grid-template: "product details" 1fr;
   align-items: center;
   gap: 20px;
-  padding: 0 24px;
+  padding: 0 24px 24px;
 }
 
 /* Product */
@@ -49,8 +49,8 @@ main {
 }
 
 .product #sofa {
-  width: clamp(400px, 80%, 800px);
-  height: clamp(auto ,50%, 50vh);
+  width: clamp(400px, 70vw, 800px);
+  /* height: clamp(auto ,50%, 50vh); */
   border-radius: 30px;
 }
 

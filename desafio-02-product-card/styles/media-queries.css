@@ -1,8 +1,8 @@
 @media (max-width: 1100px) {
   main {
     grid-template:
-  "product" 1fr
-  "details" 1fr;
+      "product" 1fr
+      "details" 1fr;
   }
 
   .product {
@@ -12,5 +12,19 @@
   .info {
     text-align: center;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .product {
+    margin-top: 10%;
+  }
+
+  .product #state-button {
+    transform: translate(10px, 45px);
+  }
+
+  .info {
+    padding-bottom: 40%;
   }
 }
