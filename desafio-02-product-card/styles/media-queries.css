@@ -1,0 +1,15 @@
+@media (max-width: 1100px) {
+  main {
+    grid-template:
+  "product" 1fr
+  "details" 1fr;
+  }
+
+  .product {
+    padding-top: 30px;
+  }
+
+  .info {
+    text-align: center;
+  }
+}
