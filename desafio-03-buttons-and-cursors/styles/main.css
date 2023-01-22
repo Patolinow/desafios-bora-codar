@@ -1,9 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   border: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #0B0911;
+  color: #eae4fa;
+  font-size: 1.1em;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+body p {
+  color: #b4b0c0;
+}
+body button {
+  color: #eae4fa;
+  padding: 16px 24px;
+  border-radius: 32px;
+}
+body button.primary {
+  background-color: #8257E5;
+}
+body button.secondary {
+  background-color: #3C3748;
+}
+body button.tertiary {
+  background-color: transparent;
+}
+body main {
+  padding: 5vh 0 0 32px;
+}
+body main section {
+  margin-bottom: 8vh;
+}
+body main article {
+  border: 8px solid #130F1E;
+  border-radius: 8px;
+}
+body main table {
+  border-collapse: collapse;
+}
+body main table th {
+  background-color: #130F1E;
+  font-weight: 400;
+  font-size: 12px;
+}
+body main table th, body main table td {
+  padding: 20px;
+  text-align: center;
+}
+body aside {
+  background-color: #130F1E;
+  padding: 3% 40px 0;
+  width: 400px;
+}
+body aside div:first-child {
+  margin-bottom: 20%;
+}
+body aside button {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+h1, button {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 1.6em;
+  padding-bottom: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */

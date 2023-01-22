@@ -1,7 +1,112 @@
+// Generals
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   border: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  $main-color:#8257E5;
+  $secondary-color: #3C3748;
+  $font-color: #eae4fa;
+  $secondary-font-color: #b4b0c0;
+  $bg-main:#0B0911;
+  $bg-secondary:#130F1E;
+
+  height: 100%;
+
+  background-color: $bg-main;
+  color: $font-color;
+  font-size: 1.1em;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    color: $secondary-font-color;
+  }
+
+  // Buttons basis
+  button {
+    color: $font-color;
+
+    padding: 16px 24px;
+    border-radius: 32px;
+  }
+
+  button.primary {
+    background-color: $main-color; 
+  }
+
+  button.secondary {
+    background-color: $secondary-color;
+  }
+
+  button.tertiary {
+    background-color: transparent;
+  }
+
+  // Main content
+  main {
+    padding: 5vh 0 0 32px;
+
+    section {
+      margin-bottom: 8vh;
+    }
+
+    article {
+      border: 8px solid $bg-secondary;
+      border-radius: 8px;
+    }
+
+    table {
+      
+      border-collapse: collapse;
+
+      th {
+        background-color: $bg-secondary;
+        font-weight: 400;
+        font-size: 12px;
+      }
+
+      th, td {
+        
+        padding: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+// Lateral menu
+  aside {
+    background-color: $bg-secondary;
+    padding: 3% 40px 0;
+    width: 400px;
+
+    div:first-child {
+      margin-bottom: 20%;
+    }
+
+    button {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+h1, button {
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 1.6em;
+  padding-bottom: 8px;
 }
