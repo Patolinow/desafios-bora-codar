@@ -29,10 +29,10 @@ body button {
   border-radius: 32px;
 }
 body button.primary {
-  background-color: #8257E5;
+  background-color: hsl(258deg, 73%, 62%);
 }
 body button.secondary {
-  background-color: #3C3748;
+  background-color: hsl(258deg, 13%, 25%);
 }
 body button.tertiary {
   background-color: transparent;
@@ -70,6 +70,56 @@ body aside div:first-child {
 body aside button {
   width: 100%;
   margin-bottom: 32px;
+}
+body aside button.primary:hover {
+  background-color: hsl(258deg, 78%, 70%);
+  transition: 300ms;
+}
+body aside button.secondary:disabled {
+  cursor: not-allowed;
+  color: #b4b0c0;
+  background-color: hsl(258deg, 13%, 15%);
+}
+body button.primary.hovered {
+  background-color: hsl(258deg, 78%, 70%);
+}
+body button.secondary.hovered {
+  background-color: hsl(258deg, 13%, 40%);
+}
+body button.focused {
+  outline: 2px solid #eae4fa;
+}
+body button.disabled {
+  cursor: not-allowed;
+  color: #b4b0c0;
+}
+body button.disabled.primary {
+  background-color: hsl(258deg, 48%, 40%);
+}
+body button.disabled.secondary {
+  background-color: hsl(258deg, 13%, 15%);
+}
+body button img {
+  margin-right: 8px;
+}
+body button.loading {
+  cursor: wait;
+  display: flex;
+  align-items: center;
+}
+body .rotating {
+  animation: rotate 1s infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body button.movable {
+  cursor: move;
 }
 
 h1, button {
