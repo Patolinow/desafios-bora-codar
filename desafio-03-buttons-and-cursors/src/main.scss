@@ -48,6 +48,10 @@ body {
     border-radius: 32px;
   }
 
+  button img{
+    margin-right: 8px;
+  }
+
   button.primary {
     background-color: hsl($main-color-h, $main-color-s, $main-color-l); 
   }
@@ -127,7 +131,7 @@ button.secondary.hovered {
   background-color: hsl($secondary-color-h, $secondary-color-s, calc($secondary-color-l + 15%));
 }
 
-button.focused {
+button.focused, button:focus-visible {
   outline: 2px solid $font-color;
 }
 
@@ -145,10 +149,6 @@ button.disabled.secondary {
   background-color: hsl($secondary-color-h, $secondary-color-s, calc($secondary-color-l - 10%));
 }
 
-button img{
-  margin-right: 8px;
-}
-
 button.loading {
   cursor: wait;
   display: flex;
@@ -157,12 +157,6 @@ button.loading {
 
 .rotating {
   animation: rotate 1s infinite;
-
-  @keyframes rotate {
-    0% {transform: rotate(0deg);}
-
-    100% {transform: rotate(360deg);}
-  }
 }
 
 button.movable {
@@ -177,4 +171,23 @@ h1, button {
 h1 {
   font-size: 1.6em;
   padding-bottom: 8px;
+}
+
+#first-interactive-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interactive-button::before {
+  content: url('../assets/load.svg');
+  animation: rotate 1s infinite;
+  height: 16px;
+  margin-right: 8px;
+}
+
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+
+  100% {transform: rotate(360deg);}
 }

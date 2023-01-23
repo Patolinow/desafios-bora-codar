@@ -28,6 +28,9 @@ body button {
   padding: 16px 24px;
   border-radius: 32px;
 }
+body button img {
+  margin-right: 8px;
+}
 body button.primary {
   background-color: hsl(258deg, 73%, 62%);
 }
@@ -86,7 +89,7 @@ body button.primary.hovered {
 body button.secondary.hovered {
   background-color: hsl(258deg, 13%, 40%);
 }
-body button.focused {
+body button.focused, body button:focus-visible {
   outline: 2px solid #eae4fa;
 }
 body button.disabled {
@@ -99,9 +102,6 @@ body button.disabled.primary {
 body button.disabled.secondary {
   background-color: hsl(258deg, 13%, 15%);
 }
-body button img {
-  margin-right: 8px;
-}
 body button.loading {
   cursor: wait;
   display: flex;
@@ -109,14 +109,6 @@ body button.loading {
 }
 body .rotating {
   animation: rotate 1s infinite;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body button.movable {
   cursor: move;
@@ -129,6 +121,28 @@ h1, button {
 h1 {
   font-size: 1.6em;
   padding-bottom: 8px;
+}
+
+#first-interactive-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interactive-button::before {
+  content: url("../assets/load.svg");
+  animation: rotate 1s infinite;
+  height: 16px;
+  margin-right: 8px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
