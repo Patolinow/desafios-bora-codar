@@ -11,6 +11,15 @@ html {
   height: 100%;
 }
 
+h1, button {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 1.6em;
+  padding-bottom: 8px;
+}
+
 body {
   height: 100%;
   background-color: #0B0911;
@@ -114,19 +123,14 @@ body button.movable {
   cursor: move;
 }
 
-h1, button {
-  font-family: "Inter", sans-serif;
-}
-
-h1 {
-  font-size: 1.6em;
-  padding-bottom: 8px;
-}
-
 #first-interactive-button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.interactive-button {
+  cursor: wait;
 }
 
 .interactive-button::before {
